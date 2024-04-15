@@ -6,7 +6,7 @@ on:
 permissions: read-all
 
 defaults:
-  run:\
+  run:
     shell: bash
 
 env:
