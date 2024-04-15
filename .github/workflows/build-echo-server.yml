@@ -6,7 +6,7 @@ on:
 permissions: read-all
 
 defaults:
-  run:
+  run:\
     shell: bash
 
 env:
@@ -71,7 +71,7 @@ jobs:
       image: ${{ needs.build.outputs.image }}
       digest: ${{ needs.build.outputs.digest }}
       # Use name rather than env variable because env are not available for reusable workflows.
-      registry-username: laurentsimon
+      registry-username: lenkakt
       #registry-username: ${{ github.actor }}
     secrets:
       registry-password: ${{ secrets.REGISTRY_PASSWORD }}
